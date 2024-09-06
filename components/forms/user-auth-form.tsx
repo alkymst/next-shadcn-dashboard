@@ -17,6 +17,9 @@ import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import GithubSignInButton from '../github-auth-button';
 import GoogleSignInButton from '../google-auth-button';
+import FacebookSignInButton from '../facebook-auth-button';
+import LinkedinSignInButton from '../linkedin-auth-button';
+import AppleSignInButton from '../apple-auth-button';
 
 const formSchema = z.object({
   email: z.string().email({ message: 'Enter a valid email address' })
@@ -29,7 +32,8 @@ export default function UserAuthForm() {
   const callbackUrl = searchParams.get('callbackUrl');
   const [loading, setLoading] = useState(false);
   const defaultValues = {
-    email: 'demo@gmail.com'
+    email: '',
+    password: ''
   };
   const form = useForm<UserFormValue>({
     resolver: zodResolver(formSchema),
@@ -55,11 +59,10 @@ export default function UserAuthForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
                 <FormControl>
                   <Input
                     type="email"
-                    placeholder="Enter your email..."
+                    placeholder="Email"
                     disabled={loading}
                     {...field}
                   />
@@ -69,8 +72,30 @@ export default function UserAuthForm() {
             )}
           />
 
-          <Button disabled={loading} className="ml-auto w-full" type="submit">
-            Continue With Email
+          <FormField
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input
+                    type="password"
+                    placeholder="Password"
+                    disabled={loading}
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <Button
+            disabled={loading}
+            className="ml-auto w-full uppercase"
+            type="submit"
+          >
+            Log In
           </Button>
         </form>
       </Form>
@@ -85,7 +110,10 @@ export default function UserAuthForm() {
         </div>
       </div>
       {/* <GithubSignInButton /> */}
+      <FacebookSignInButton />
       <GoogleSignInButton />
+      <LinkedinSignInButton />
+      <AppleSignInButton />
     </>
   );
 }

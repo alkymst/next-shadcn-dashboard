@@ -1,12 +1,27 @@
 import { NextAuthConfig } from 'next-auth';
 import CredentialProvider from 'next-auth/providers/credentials';
 import GoogleProvider from 'next-auth/providers/google';
+import FacebookProvider from 'next-auth/providers/facebook';
+import LinkedinProvider from 'next-auth/providers/linkedin';
+import AppleProvider from 'next-auth/providers/apple';
 
 const authConfig = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_ID ?? '',
       clientSecret: process.env.GOOGLE_SECRET ?? ''
+    }),
+    FacebookProvider({
+      clientId: process.env.AUTH_FACEBOOK_ID ?? '',
+      clientSecret: process.env.AUTH_FACEBOOK_SECRET ?? ''
+    }),
+    LinkedinProvider({
+      clientId: process.env.AUTH_LINKEDIN_ID ?? '',
+      clientSecret: process.env.AUTH_LINKEDIN_SECRET ?? ''
+    }),
+    AppleProvider({
+      clientId: process.env.AUTH_APPLE_ID ?? '',
+      clientSecret: process.env.AUTH_APPLE_SECRET ?? ''
     }),
     CredentialProvider({
       credentials: {
