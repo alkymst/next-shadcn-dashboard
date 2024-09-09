@@ -28,13 +28,13 @@ export default function Sidebar({ className }: SidebarProps) {
         className
       )}
     >
-      <div className="flex hidden justify-center p-5 pt-10 align-middle lg:block">
+      <div className="hidden p-5 pt-10 align-middle lg:block">
         <Link href={'https://mecum.com'}>
           {isMinimized ? (
             <Image
               src="/logo.png"
-              width={70}
-              height={70}
+              width={31}
+              height={31}
               alt="Mecum Auctions"
             />
           ) : (

@@ -119,13 +119,13 @@ export const navItems: NavItem[] = [
   },
   {
     title: 'Register To Bid',
-    href: '/dashboard/user',
+    href: '/dashboard/register-to-bid',
     icon: 'gavel',
     label: 'register-to-bid'
   },
   {
-    title: 'Consign',
-    href: '/dashboard/user',
+    title: 'Consignment',
+    href: '/dashboard/consign',
     icon: 'carFront',
     label: 'consign'
   },
