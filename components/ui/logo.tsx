@@ -3,7 +3,6 @@ import { cn } from '@/lib/utils';
 function Logo({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <svg
-      className="mx-auto"
       aria-label="Mecum Auctions Logo"
       role="img"
       xmlns="http://www.w3.org/2000/svg"

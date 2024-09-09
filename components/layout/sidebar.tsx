@@ -28,8 +28,8 @@ export default function Sidebar({ className }: SidebarProps) {
         className
       )}
     >
-      <div className="hidden p-5 pt-10 align-middle lg:block">
-        <Link href={'https://mecum.com'}>
+      <div className="hidden justify-center p-5 pt-10 align-middle lg:flex">
+        <Link className=" inline-block" href={'https://mecum.com'}>
           {isMinimized ? (
             <Image
               src="/logo.png"
