@@ -18,8 +18,8 @@ export default function AppleSignInButton() {
         signIn('apple', { callbackUrl: callbackUrl ?? '/dashboard' })
       }
     >
-      <Icons.google className="mr-2 h-4 w-4" />
-      Continue with Apple
+      <Icons.apple className="mr-2 h-4 w-4" />
+      Apple
     </Button>
   );
 }

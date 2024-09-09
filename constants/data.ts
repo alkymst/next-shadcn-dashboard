@@ -136,14 +136,8 @@ export const navItems: NavItem[] = [
     label: 'profile'
   },
   {
-    title: 'Kanban',
-    href: '/dashboard/kanban',
-    icon: 'kanban',
-    label: 'kanban'
-  },
-  {
-    title: 'Login',
-    href: '/',
+    title: 'Return to Mecum.com',
+    href: 'https://mecum.com',
     icon: 'login',
     label: 'login'
   }

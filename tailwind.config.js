@@ -16,6 +16,9 @@ module.exports = {
         '2xl': '1400px'
       }
     },
+    colors: {
+      'milano-red': '#BA1900'
+    },
     extend: {
       colors: {
         border: 'hsl(var(--border))',

@@ -20,6 +20,7 @@ import GoogleSignInButton from '../google-auth-button';
 import FacebookSignInButton from '../facebook-auth-button';
 import LinkedinSignInButton from '../linkedin-auth-button';
 import AppleSignInButton from '../apple-auth-button';
+import { CreateAccountButton } from '../ui/create-account-button';
 
 const formSchema = z.object({
   email: z.string().email({ message: 'Enter a valid email address' })
@@ -92,7 +93,7 @@ export default function UserAuthForm() {
 
           <Button
             disabled={loading}
-            className="ml-auto w-full uppercase"
+            className="ml-auto w-full rounded-none py-6 text-xl uppercase"
             type="submit"
           >
             Log In
@@ -110,10 +111,13 @@ export default function UserAuthForm() {
         </div>
       </div>
       {/* <GithubSignInButton /> */}
-      <FacebookSignInButton />
-      <GoogleSignInButton />
-      <LinkedinSignInButton />
-      <AppleSignInButton />
+      <div className="grid grid-cols-2">
+        <FacebookSignInButton />
+        <GoogleSignInButton />
+        <LinkedinSignInButton />
+        <AppleSignInButton />
+      </div>
+      <CreateAccountButton />
     </>
   );
 }

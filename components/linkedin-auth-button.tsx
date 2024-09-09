@@ -11,15 +11,15 @@ export default function LinkedinSignInButton() {
 
   return (
     <Button
-      className="w-full"
+      className="w-full "
       variant="outline"
       type="button"
       onClick={() =>
         signIn('linkedin', { callbackUrl: callbackUrl ?? '/dashboard' })
       }
     >
-      <Icons.google className="mr-2 h-4 w-4" />
-      Continue with LinkedIn
+      <Icons.linkedin className="mr-2 h-4 w-4" />
+      LinkedIn
     </Button>
   );
 }

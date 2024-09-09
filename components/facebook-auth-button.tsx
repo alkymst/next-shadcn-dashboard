@@ -18,8 +18,8 @@ export default function FacebookSignInButton() {
         signIn('facebook', { callbackUrl: callbackUrl ?? '/dashboard' })
       }
     >
-      <Icons.google className="mr-2 h-4 w-4" />
-      Continue with Facebook
+      <Icons.facebook className="mr-2 h-4 w-4" />
+      Facebook
     </Button>
   );
 }

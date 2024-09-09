@@ -3,6 +3,7 @@ import Link from 'next/link';
 import UserAuthForm from '@/components/forms/user-auth-form';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { Logo } from '@/components/ui/logo';
 
 export const metadata: Metadata = {
   title: 'Authentication',
@@ -21,10 +22,10 @@ export default function AuthenticationPage() {
       >
         Login
       </Link>
-      <div className="dark:border-r relative hidden h-full flex-col bg-muted p-10 text-white lg:flex">
-        <div className="absolute inset-0 bg-zinc-900" />
+      <div className="dark:border-r text-white relative hidden h-full flex-col p-10 lg:flex">
+        <div className="absolute inset-0 bg-[url('https://images.mecum.com/images/c_fill,f_auto,g_center,q_auto,w_1920/v1718654445/auctions/CA24/1124198/643654/643654.jpg?_i=AA')] bg-cover bg-center" />
         <div className="relative z-20 flex items-center text-lg font-medium">
-          Mecum Auto Auctions
+          <Logo />
         </div>
       </div>
       <div className="flex h-full items-center p-4 lg:p-8">
@@ -34,8 +35,14 @@ export default function AuthenticationPage() {
               Sign Into Your Profile
             </h1>
             <p className="text-sm text-muted-foreground">
-              Infonet Member or Mecum Customer?{' '}
-              <a href="">Activate Your Profile</a>
+              Infonet Member or Mecum Customer?
+              <br />
+              <a
+                className=" text-milano-red"
+                href="https://my.mecum.com/profile/activate"
+              >
+                Activate Your Profile
+              </a>
             </p>
           </div>
           <UserAuthForm />
