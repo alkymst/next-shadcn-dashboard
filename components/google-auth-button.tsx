@@ -11,14 +11,15 @@ export default function GoogleSignInButton() {
 
   return (
     <Button
-      className=""
+      className="flex justify-around"
       variant="outline"
       type="button"
+      size="lg"
       onClick={() =>
         signIn('google', { callbackUrl: callbackUrl ?? '/dashboard' })
       }
     >
-      <Icons.google className="mr-2 h-4 w-4 border-r-2 border-milano-red" />
+      <Icons.google className="mr-2 h-4 w-4" />
       Google
     </Button>
   );

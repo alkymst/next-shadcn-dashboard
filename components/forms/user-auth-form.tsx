@@ -111,7 +111,7 @@ export default function UserAuthForm() {
         </div>
       </div>
       {/* <GithubSignInButton /> */}
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 gap-4">
         <FacebookSignInButton />
         <GoogleSignInButton />
         <LinkedinSignInButton />

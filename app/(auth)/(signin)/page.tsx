@@ -27,6 +27,19 @@ export default function AuthenticationPage() {
         <div className="relative z-20 flex items-center text-lg font-medium">
           <Logo />
         </div>
+        <div className="relative z-20 mt-auto">
+          <blockquote className="space-y-2">
+            <p className="text-lg">
+              Mecum is the best venue to sell a collection and is hands-down the
+              subject matter expert in the industry of collector cars, trucks,
+              motorcycles or anything else related. It made things a little bit
+              easier, and Mecum does everything it can to make you feel
+              comfortable about letting such things live another life in the
+              hands of someone else.
+            </p>
+            <footer className="text-sm">JOHN TAGLIAPIETRA</footer>
+          </blockquote>
+        </div>
       </div>
       <div className="flex h-full items-center p-4 lg:p-8">
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">

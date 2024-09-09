@@ -11,9 +11,10 @@ export default function LinkedinSignInButton() {
 
   return (
     <Button
-      className="w-full "
+      className="flex justify-around"
       variant="outline"
       type="button"
+      size="lg"
       onClick={() =>
         signIn('linkedin', { callbackUrl: callbackUrl ?? '/dashboard' })
       }
