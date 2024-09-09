@@ -118,21 +118,51 @@ export const navItems: NavItem[] = [
     label: 'Dashboard'
   },
   {
+    title: 'Register To Bid',
+    href: '/dashboard/user',
+    icon: 'gavel',
+    label: 'register-to-bid'
+  },
+  {
+    title: 'Consign',
+    href: '/dashboard/user',
+    icon: 'carFront',
+    label: 'consign'
+  },
+  {
+    title: 'Online Bidding',
+    href: 'https://bidnow.mecum.com/auctions',
+    icon: 'dollarsign',
+    label: 'online-bidding'
+  },
+  {
+    title: 'Favorites',
+    href: '/dashboard/user',
+    icon: 'star',
+    label: 'favorites'
+  },
+  {
+    title: 'Accounts',
+    href: '/dashboard/user',
+    icon: 'landmark',
+    label: 'register-to-bid'
+  },
+  {
+    title: 'Tickets',
+    href: '/dashboard/user',
+    icon: 'tickets',
+    label: 'tickets'
+  },
+  {
     title: 'User',
     href: '/dashboard/user',
     icon: 'user',
     label: 'user'
   },
   {
-    title: 'Employee',
-    href: '/dashboard/employee',
-    icon: 'employee',
-    label: 'employee'
-  },
-  {
-    title: 'Profile',
+    title: 'Manage Profile',
     href: '/dashboard/profile',
-    icon: 'profile',
+    icon: 'cog',
     label: 'profile'
   },
   {
